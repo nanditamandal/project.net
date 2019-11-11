@@ -1,0 +1,43 @@
+﻿@model CompileError.Model.Model.Customer
+
+@{
+    ViewBag.Title = "Add";
+}
+
+<html>
+<head>
+    <title>Add Customer</title>
+
+</head>
+<body>
+
+    <form method='post' style='text-align:center'>
+
+        <h1 style='text-align:center'>Add here</h1>
+        <th><b>Customer Code    : </b></th> <input type='text' onkeyup='valiation(this)' name='Code' value="@Model.Code" id='code' placeholder='At lest 4 character'><level id='check' style='color:red'>*</level><br></br>
+
+
+        <b>Customer Name    : </b> <input type='text' onkeyup='valiationfn(this)' name='name' value="@Model.Name" id='Name' placeholder='input name'><level id='checkfn' style='color:red'>*</level><br></br>
+
+        <b>Address          : </b>  <input type='text' onkeyup='valiationemail(this)' name='Address' value="@Model.Address" id='address' placeholder='input valid address'><level id='checkmail' style='color:red'>*</level><br></br>
+
+        <b>Contact          :</b> <input type='text' name='Contact' value="@Model.Contact" id='contact' placeholder='enter contact number'><br></br>
+
+        <b>Email            : </b>  <input type='text' onkeyup='valiationemail(this)' name='Email' value="@Model.Email" id='email' placeholder='input valid email'><level id='checkmail' style='color:red'>*</level><br></br>
+        <b>Reorder Level    : </b>  <input type='text' onkeyup='valiationemail(this)' name='LoyalityPoint' value="@Model.LoyalityPoint" id='reorderlevel' placeholder='enter reorder level'><level id='checkmail' style='color:red'>*</level><br></br>
+
+        <input type='submit' name='Add' value="save" style='color:green'><br></br>
+        <b>
+            @if (ViewBag.Message != null)
+            {
+                @ViewBag.Message;
+            }
+
+        </b>
+
+
+    </form>
+
+</body>
+</html>
+
